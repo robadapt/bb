@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="backboard.io - One API. All LLMs. Persistent Memory. Unified access to major language models with stateful RAG capabilities.">
+    <meta name="keywords" content="API, LLM, AI, RAG, GPT, Claude, Gemini, memory, stateful">
+    <title>backboard.io - One API. 400+ LLMs. Persistent Memory.</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">backboard.io</span>
+                </div>
+            </div>
+            <div class="nav-center">
+                <div class="nav-tabs">
+                    <a href="#features" class="nav-tab active">Features</a>
+                    <a href="#how-it-works" class="nav-tab">How It Works</a>
+                    <a href="#examples" class="nav-tab">Examples</a>
+                    <a href="#pricing" class="nav-tab">Pricing</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#docs" class="nav-link">Docs</a>
+                <a href="#login" class="nav-link">Login</a>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-text">
+                        <div class="hero-tagline" COLOR="blue">
+                            <span class="line-number">01</span> STATEFULL BY DESIGN, LIMITLESS BY NATURE.</div>
+                        <h1 class="hero-title"> 
+                            One API. <BR>400+ LLMs.
+                            <br>
+                            <span class="highlight">Persistent Portable Memory</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Unified access to GPT, Claude, Gemini, and more with stateful RAG 
+                            that remembers your conversations and grows smarter over time.
+                        </p>
+                        <div class="hero-cta">
+                            <button class="btn btn-primary btn-large">
+                                <span>Get Started Free</span>
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="m9 18 6-6-6-6"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-secondary btn-large">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polygon points="5,3 19,12 5,21 5,3"/>
+                                </svg>
+                                <span>View Demo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="window-title">quick-start.py</div>
+                        </div>
+                        <div class="code-content">
+                            <pre class="line-numbers"><code class="language-python">import backboard
+
+# Initialize with your API key
+bb = backboard.Client(api_key="your_api_key")
+
+# Start a conversation with persistent memory
+response = bb.chat(
+    model="gpt-4",
+    messages=[{
+        "role": "user", 
+        "content": "Remember: I prefer Python examples"
+    }],
+    memory_id="my_project"
+)
+
+# Later conversations remember context
+response = bb.chat(
+    model="claude-3",
+    messages=[{"role": "user", "content": "Show me an API example"}],
+    memory_id="my_project"  # Same memory, different model
+)
+
+print(response.content)  # Returns Python example!</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="line-number">25</span>
+                    Why Developers Choose backboard.io
+                </h2>
+                <p class="section-subtitle">
+                    Stop juggling multiple APIs. Start building with intelligence that persists.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon unified">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6"/>
+                            <path d="m1 12 6 0m6 0 6 0"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Unified API</h3>
+                    <p class="feature-description">
+                        Access GPT, Claude, Gemini, and 400+ other models through one consistent 
+                        endpoint. No more juggling multiple API keys or different request formats.
+                    </p>
+                    <div class="feature-code">
+                        <code>bb.chat(model="any-llm", ...)</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon memory">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 19c-5 0-8-1-8-1s1-1 1-4 1-4 1-4 3-1 8-1 8 1 8 1-1 1-1 4-1 4-1 4-3 1-8 1z"/>
+                            <path d="M15 11v-1a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Stateful Threads</h3>
+                    <p class="feature-description">
+                        Conversations that remember. Context that persists across sessions, 
+                        models, and even applications. Your AI gets smarter over time.
+                    </p>
+                    <div class="feature-code">
+                        <code>memory_id="persistent_context"</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon rag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10,9 9,9 8,9"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">RAG Integration</h3>
+                    <p class="feature-description">
+                        Connect your knowledge base seamlessly. Upload docs, link databases, 
+                        or integrate APIs. Your data becomes part of the conversation.
+                    </p>
+                    <div class="feature-code">
+                        <code>bb.add_knowledge(source="docs/")</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon portable">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Portable Memory</h3>
+                    <p class="feature-description">
+                        Take your AI context anywhere. Export memory, share between teams, 
+                        or migrate between environments without losing conversation history.
+                    </p>
+                    <div class="feature-code">
+                        <code>memory.export("team_context.json")</code>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon portable">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Feature Suite</h3>
+                    <p class="feature-description">
+                        Available features including, multi-user threads, user tagging, thread branching, folders, bookmarks, and more.
+                    </p>
+                    <div class="feature-code">
+                        <code>memory.export("team_context.json")</code>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon portable">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Secure</h3>
+                    <p class="feature-description">
+                        Enterprise-grade security with end-to-end encryption. Your data is 
+                        protected, private, and never used to train other models.
+                    </p>
+                    <div class="feature-code">
+                        <code>memory.export("team_context.json")</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="line-number">67</span>
+                    How It Works
+                </h2>
+                <p class="section-subtitle">
+                    Get up and running in minutes with persistent AI memory
+                </p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Connect Your Data</h3>
+                        <p class="step-description">
+                            Upload documents, connect databases, or link APIs. backboard.io 
+                            automatically indexes and vectorizes your knowledge base.
+                        </p>
+                        <div class="step-visual">
+                            <div class="file-icons">
+                                <div class="file-icon pdf">PDF</div>
+                                <div class="file-icon db">DB</div>
+                                <div class="file-icon api">API</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="bb-icon">⚡</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Start Conversations</h3>
+                        <p class="step-description">
+                            Chat with any LLM using our unified API. Each conversation creates 
+                            persistent memory that improves responses over time.
+                        </p>
+                        <div class="step-code">
+                            <pre><code class="language-python">response = bb.chat(
+    model="gpt-4",
+    messages=[{"role": "user", "content": "Explain our API docs"}],
+    memory_id="customer_support"
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Build on Context</h3>
+                        <p class="step-description">
+                            Every interaction adds to your memory. Switch between models, 
+                            continue conversations days later, or share context across teams.
+                        </p>
+                        <div class="step-visual">
+                            <div class="memory-timeline">
+                                <div class="memory-item">Day 1: Initial context</div>
+                                <div class="memory-item">Day 3: Added preferences</div>
+                                <div class="memory-item active">Day 7: Full understanding</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples Section -->
+    <section id="examples" class="examples">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="line-number">112</span>
+                    Code Examples
+                </h2>
+                <p class="section-subtitle">
+                    See how easy it is to integrate backboard.io into your workflow
+                </p>
+            </div>
+            
+            <div class="example-tabs">
+                <button class="tab-button active" data-tab="python">Python</button>
+                <button class="tab-button" data-tab="javascript">JavaScript</button>
+                <button class="tab-button" data-tab="curl">cURL</button>
+            </div>
+
+            <div class="example-content">
+                <div class="example-pane active" id="python-example">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="window-title">example.py</div>
+                            <button class="copy-button" data-code="python">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                        <div class="code-content">
+                            <pre class="line-numbers"><code class="language-python">import backboard
+
+# Initialize client
+bb = backboard.Client(api_key="bb_xxxxxxxxx")
+
+# Create memory with your knowledge base
+memory = bb.create_memory(
+    name="product_support",
+    sources=["./docs", "knowledge_base.json"]
+)
+
+# Multi-model conversation with persistent context
+def handle_customer_query(query):
+    # Start with fast model for classification
+    classification = bb.chat(
+        model="gpt-3.5-turbo",
+        messages=[{
+            "role": "system",
+            "content": "Classify this query: technical, billing, or general"
+        }, {
+            "role": "user", 
+            "content": query
+        }],
+        memory_id=memory.id
+    )
+    
+    # Use appropriate model based on complexity
+    if "technical" in classification.content.lower():
+        model = "claude-3-opus"
+    else:
+        model = "gpt-4"
+    
+    # Get detailed response with full context
+    response = bb.chat(
+        model=model,
+        messages=[{"role": "user", "content": query}],
+        memory_id=memory.id,  # Same memory = full context
+        temperature=0.7
+    )
+    
+    return response.content
+
+# Memory persists across sessions
+query1 = "I'm having trouble with the Python SDK authentication"
+response1 = handle_customer_query(query1)
+
+# Later conversation remembers previous context
+query2 = "Can you show me the fix for that auth issue?"
+response2 = handle_customer_query(query2)  # Remembers query1!</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-pane" id="javascript-example">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="window-title">example.js</div>
+                            <button class="copy-button" data-code="javascript">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                        <div class="code-content">
+                            <pre class="line-numbers"><code class="language-javascript">import { BackboardClient } from '@backboard/sdk';
+
+// Initialize client
+const bb = new BackboardClient({
+  apiKey: process.env.BACKBOARD_API_KEY
+});
+
+// Create persistent memory for user sessions
+async function createUserMemory(userId, preferences) {
+  const memory = await bb.memory.create({
+    id: `user_${userId}`,
+    metadata: {
+      preferences,
+      created: new Date().toISOString()
+    }
+  });
+  
+  // Add user's documents to memory
+  await bb.memory.addSources(memory.id, [
+    { type: 'text', content: `User preferences: ${JSON.stringify(preferences)}` },
+    { type: 'file', path: `./user_data/${userId}/history.json` }
+  ]);
+  
+  return memory;
+}
+
+// Chat with context awareness
+async function chatWithMemory(userId, message) {
+  try {
+    const response = await bb.chat({
+      model: 'gpt-4-turbo',
+      messages: [
+        {
+          role: 'system',
+          content: 'You are a helpful assistant with access to user context and preferences.'
+        },
+        {
+          role: 'user',
+          content: message
+        }
+      ],
+      memoryId: `user_${userId}`,
+      stream: false
+    });
+    
+    // Memory automatically updates with this conversation
+    return response.content;
+    
+  } catch (error) {
+    console.error('Chat error:', error);
+    throw error;
+  }
+}
+
+// Switch models while maintaining context
+async function getCodeReview(userId, code) {
+  // Use Claude for code review
+  const review = await bb.chat({
+    model: 'claude-3-opus',
+    messages: [{
+      role: 'user',
+      content: `Please review this code:\n\`\`\`\n${code}\n\`\`\``
+    }],
+    memoryId: `user_${userId}`  // Same memory = knows user's coding style
+  });
+  
+  return review.content;
+}
+
+// Example usage
+(async () => {
+  const userId = 'dev_123';
+  
+  // Create memory with user preferences
+  await createUserMemory(userId, {
+    language: 'JavaScript',
+    framework: 'React',
+    style: 'functional'
+  });
+  
+  // Chat remembers preferences
+  const response = await chatWithMemory(
+    userId, 
+    "Show me how to create a custom hook"
+  );
+  console.log(response); // Returns React functional hook example
+})();</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-pane" id="curl-example">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="window-title">example.sh</div>
+                            <button class="copy-button" data-code="curl">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                        <div class="code-content">
+                            <pre class="line-numbers"><code class="language-bash"># Create a memory with knowledge base
+curl -X POST https://api.backboard.io/v1/memory \
+  -H "Authorization: Bearer bb_xxxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "documentation_chat",
+    "sources": [
+      {
+        "type": "url",
+        "url": "https://docs.mycompany.com/api"
+      },
+      {
+        "type": "text",
+        "content": "Company policy: Always be helpful and accurate"
+      }
+    ]
+  }'
+
+# Start conversation with GPT-4
+curl -X POST https://api.backboard.io/v1/chat \
+  -H "Authorization: Bearer bb_xxxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gpt-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What are the rate limits for our API?"
+      }
+    ],
+    "memory_id": "documentation_chat",
+    "temperature": 0.7
+  }'
+
+# Continue conversation with Claude (same memory)
+curl -X POST https://api.backboard.io/v1/chat \
+  -H "Authorization: Bearer bb_xxxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "claude-3-opus",
+    "messages": [
+      {
+        "role": "user", 
+        "content": "Can you explain that in more detail with examples?"
+      }
+    ],
+    "memory_id": "documentation_chat"
+  }'
+
+# Stream responses for real-time applications
+curl -X POST https://api.backboard.io/v1/chat \
+  -H "Authorization: Bearer bb_xxxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gpt-4-turbo",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a comprehensive guide for new developers"
+      }
+    ],
+    "memory_id": "documentation_chat",
+    "stream": true
+  }' --no-buffer
+
+# Export memory for backup or sharing
+curl -X GET https://api.backboard.io/v1/memory/documentation_chat/export \
+  -H "Authorization: Bearer bb_xxxxxxxxx" \
+  > memory_backup.json
+
+# Import memory in different environment
+curl -X POST https://api.backboard.io/v1/memory/import \
+  -H "Authorization: Bearer bb_xxxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d @memory_backup.json</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="line-number">203</span>
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="section-subtitle">
+                    Pay-as-you-go with prepaid credits. All plans include persistent memory and RAG integration.
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Developer</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">No subscriptions. Models have different pricing starting at FREE! </p>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Unlimited API calls/month</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>1,000 persistent memories</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Access to 400+ LLMs</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Community support</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Get Started Free</button>
+                </div>
+
+
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="contact">Contact us</span>
+                        </div>
+                        <p class="plan-description">Custom solutions for large organizations</p>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Unlimited API calls</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Private cloud deployment</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Custom model fine-tuning</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>24/7 dedicated support</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>SLA guarantees</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">backboard.io</span>
+                    </div>
+                    <p class="footer-description">
+                        The unified API platform for LLMs with persistent memory and RAG capabilities.
+                    </p>
+                    <div class="footer-links">
+                        <a href="#status" class="footer-link">
+                            <span class="status-dot"></span>
+                            API Status
+                        </a>
+                        <a href="#privacy" class="footer-link">Privacy Policy</a>
+                        <a href="#terms" class="footer-link">Terms of Service</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#changelog">Changelog</a>
+                        <a href="#roadmap">Roadmap</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Developers</h4>
+                        <a href="#docs">Documentation</a>
+                        <a href="#api-reference">API Reference</a>
+                        <a href="#examples">Examples</a>
+                        <a href="#sdks">SDKs</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#help">Help Center</a>
+                        <a href="#community">Community</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#discord">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 backboard.io. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#github" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#twitter" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
